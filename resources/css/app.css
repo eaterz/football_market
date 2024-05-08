@@ -1,0 +1,37 @@
+@import "/resources/css/index.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar styling */
+.nav-market {
+    background-color: #333; /* Dark background color */
+    padding: 15px 20px; /* Padding for better spacing */
+}
+
+.nav-market ul {
+    list-style-type: none; /* Remove default bullet points */
+    text-align: right; /* Align menu items to the right */
+}
+
+.nav-market ul li {
+    display: inline-block; /* Display menu items in a row */
+    margin-left: 20px; /* Add spacing between menu items */
+}
+
+.nav-market ul li a {
+    color: #fff; /* Text color */
+    text-decoration: none; /* Remove default underline */
+    padding: 10px 15px; /* Padding for better clickable area */
+    transition: all 0.3s ease; /* Smooth transition effect */
+}
+
+.nav-market ul li a:hover {
+    background-color: #555; /* Darker background color on hover */
+}
