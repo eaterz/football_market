@@ -20,15 +20,15 @@
 
                     @if (Auth::user()->usertype == 'admin')
 
-                        <x-nav-link href="admin/products" :active="request()->routeIs('admin.products')">
+                        <x-nav-link href="/admin/product" :active="request()->routeIs('admin.product')">
                             {{ __('Products') }}
                         </x-nav-link>
 
-                        <x-nav-link href="admin/category" :active="request()->routeIs('admin.category')">
+                        <x-nav-link href="/admin/category" :active="request()->routeIs('admin.category')">
                             {{ __('Category') }}
                         </x-nav-link>
 
-                        <x-nav-link href="admin/user" :active="request()->routeIs('admin.user')">
+                        <x-nav-link href="/admin/user" :active="request()->routeIs('admin.user')">
                             {{ __('User') }}
                         </x-nav-link>
 
@@ -38,15 +38,19 @@
                     {{--user link --}}
                     @if (Auth::user()->usertype == 'user')
 
-                        <x-nav-link href="order" :active="request()->routeIs('user.order')">
+                        <x-nav-link href="/order" :active="request()->routeIs('user.order')">
                             {{ __('Order') }}
                         </x-nav-link>
 
-                        <x-nav-link href="product" :active="request()->routeIs('user.product')">
+                        <x-nav-link href="/product" :active="request()->routeIs('user.product')">
                             {{ __('Product') }}
                         </x-nav-link>
 
-                        <x-nav-link href="profile" :active="request()->routeIs('profile.edit')">
+                        <x-nav-link href="/cart" :active="request()->routeIs('user.cart')">
+                            {{ __('Cart') }}
+                        </x-nav-link>
+
+                        <x-nav-link href="/profile" :active="request()->routeIs('profile.edit')">
                             {{ __('My Profile') }}
                         </x-nav-link>
 
@@ -114,8 +118,8 @@
 
             @if (Auth::user()->usertype == 'admin')
 
-                <x-responsive-nav-link href="admin/products" :active="request()->routeIs('admin.products')">
-                    {{ __('Products') }}
+                <x-responsive-nav-link href="admin/product" :active="request()->routeIs('admin.product')">
+                    {{ __('Product') }}
                 </x-responsive-nav-link>
 
                 <x-responsive-nav-link href="admin/category" :active="request()->routeIs('admin.category')">

@@ -1,32 +1,128 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* index.css */
+
+.show-product {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
 }
 
-/* Navbar styling */
-.nav-market {
-    background-color: #333; /* Dark background color */
-    padding: 15px 20px; /* Padding for better spacing */
+.show-product-image {
+    width: 40vw;
+    height: auto;
+    padding: 20px; /* Add padding to the white square */
+    box-sizing: border-box; /* Include padding in the width and height calculations */
+    border-radius: 100px;
 }
 
-.nav-market ul {
-    list-style-type: none; /* Remove default bullet points */
-    text-align: right; /* Align menu items to the right */
+
+.show-product-info {
+    flex: 1;
+    margin-left: 2rem; /* Add margin to create gap between image and product name */
+    height: 100%;
 }
 
-.nav-market ul li {
-    display: inline-block; /* Display menu items in a row */
-    margin-left: 20px; /* Add spacing between menu items */
+.show-product-name {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
 }
 
-.nav-market ul li a {
-    color: #fff; /* Text color */
-    text-decoration: none; /* Remove default underline */
-    padding: 10px 15px; /* Padding for better clickable area */
-    transition: all 0.3s ease; /* Smooth transition effect */
+.show-product-price {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
-.nav-market ul li a:hover {
-    background-color: #555; /* Darker background color on hover */
+.show-product-sizes {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.show-product-description {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+/* size */
+/* index.css */
+.form-size{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+.size {
+    display: flex;
+    gap: 2vw;
+    flex-direction: column; /* Change the direction to column to stack the rows */
+}
+
+.row {
+    display: flex;
+    gap: 20px; /* Add gap between radio buttons */
+    margin-bottom: 10px; /* Add margin between rows */
+
+}
+
+.size-label {
+    display: inline-block;
+    position: relative;
+    padding-left: 25px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.size-label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.size-label .size-number {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3vw;
+    height: 3vh;
+    border-radius: 5px; /* Make the input look like a rounded square */
+    background-color: #fff;
+    border: 2px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.size-label input:checked + .size-number {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+/* index.css */
+
+/* index.css */
+
+.show-product-button {
+    margin-top: 1rem;
+    display: block;
+    width: 20vw;
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+    background-color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, outline-color 0.3s ease;
+    outline: 2px solid transparent; /* Initial transparent outline */
+}
+
+.show-product-button:hover {
+    background-color: #fff;
+    color: #000;
+    outline-color: #000; /* Change outline color on hover */
+}
+
+.show-product-button:focus {
+    outline-color: #000; /* Keep outline color after click */
 }

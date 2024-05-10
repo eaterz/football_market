@@ -1,37 +1,151 @@
 @import "/resources/css/index.css";
+@import "/resources/css/cart.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+
+.main-container {
+    margin: 30px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Navbar styling */
-.nav-market {
-    background-color: #333; /* Dark background color */
-    padding: 15px 20px; /* Padding for better spacing */
+.create-form {
+
+    max-width: 100%;
+    width: 30vw;
+    grid-column-gap: 26px;
+    grid-row-gap: 10px;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    grid-auto-columns: 1fr;
+    display: grid;
+    border: 2px solid black;
+    border-radius: 30px;
+    padding: 40px;
+    background-color: white;
 }
 
-.nav-market ul {
-    list-style-type: none; /* Remove default bullet points */
-    text-align: right; /* Align menu items to the right */
+.form-field {
+    display: flex;
+    flex-direction: column;
 }
 
-.nav-market ul li {
-    display: inline-block; /* Display menu items in a row */
-    margin-left: 20px; /* Add spacing between menu items */
+form textarea{
+    border-radius: 10px;
 }
 
-.nav-market ul li a {
-    color: #fff; /* Text color */
-    text-decoration: none; /* Remove default underline */
-    padding: 10px 15px; /* Padding for better clickable area */
-    transition: all 0.3s ease; /* Smooth transition effect */
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.nav-market ul li a:hover {
-    background-color: #555; /* Darker background color on hover */
+.rounded-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.rounded-button:hover {
+    background-color: #0056b3;
+}
+
+
+/* create button*/
+
+.create-task {
+    margin-left: 70vw;
+}
+.create-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+/* product */
+.product-grid {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    row-gap: 30px;
+    padding: 20px;
+}
+
+.product-grid a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product {
+    height: 60vh;
+    width: 18vw;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+
+}
+
+.product:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.image-container {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 0 auto 10px;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.text-container {
+    margin-bottom: 10px;
+}
+
+.name {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.price,
+.description,
+.category {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+/* delete */
+.delete-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: darkred;
 }
