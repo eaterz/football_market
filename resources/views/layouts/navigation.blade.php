@@ -6,52 +6,23 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ Auth::user()->usertype == 'admin' ? route('admin.dashboard') : route('dashboard')}}">
-                        <x-application-logo class="block h-9 w-auto fill-current text-gray-800" />
+                         <img src="https://cdn3.iconfinder.com/data/icons/pyconic-icons-1-2/512/stars-512.png" class="block h-9 w-auto fill-current text-gray-800">
                     </a>
                 </div>
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="Auth::user()->usertype == 'admin' ? route('admin.dashboard') : route('dashboard')" :active="Auth::user()->usertype == 'admin' ? request()->routeIs('admin.dashboard') : request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
+                        {{ __('Galerija') }}
                     </x-nav-link>
 
-                    {{--admin link --}}
-
-                    @if (Auth::user()->usertype == 'admin')
-
-                        <x-nav-link href="/admin/product" :active="request()->routeIs('admin.product')">
-                            {{ __('Products') }}
-                        </x-nav-link>
-
-                        <x-nav-link href="/admin/category" :active="request()->routeIs('admin.category')">
-                            {{ __('Category') }}
-                        </x-nav-link>
-
-                        <x-nav-link href="/admin/user" :active="request()->routeIs('admin.user')">
-                            {{ __('User') }}
-                        </x-nav-link>
-
-                    @endif
 
 
                     {{--user link --}}
                     @if (Auth::user()->usertype == 'user')
 
-                        <x-nav-link href="/order" :active="request()->routeIs('user.order')">
-                            {{ __('Order') }}
-                        </x-nav-link>
-
-                        <x-nav-link href="/product" :active="request()->routeIs('user.product')">
-                            {{ __('Product') }}
-                        </x-nav-link>
-
-                        <x-nav-link href="/cart" :active="request()->routeIs('user.cart')">
-                            {{ __('Cart') }}
-                        </x-nav-link>
-
-                        <x-nav-link href="/profile" :active="request()->routeIs('profile.edit')">
-                            {{ __('My Profile') }}
+                        <x-nav-link href="/upload" :active="request()->routeIs('image.create')">
+                            {{ __('Upload') }}
                         </x-nav-link>
 
                     @endif
